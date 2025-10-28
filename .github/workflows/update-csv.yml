@@ -26,7 +26,7 @@ jobs:
 
       - name: Commit the CSV update
         run: |
-          echo "Updating the CSV file" > latest.csv  # This is just a placeholder logic
+          echo "Updating the CSV file" > latest.csv  # Placeholder logic for updating the CSV
           git add latest.csv
           git commit -m "Update CSV"
           
