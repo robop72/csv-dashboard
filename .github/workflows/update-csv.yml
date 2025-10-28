@@ -1,6 +1,5 @@
 name: Update CSV Automatically
 
-# This will run the script once a day
 on:
   schedule:
     - cron: '0 0 * * *'  # This means once per day at midnight (UTC)
@@ -20,18 +19,9 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install Dependencies
-        run: npm install -g firebase-tools  # Optional if you plan to interact with Firebase. You can remove it if not needed.
-
-      - name: Push CSV update (custom logic)
+      - name: Commit the CSV update
         run: |
-          # Your script to update the CSV here, for example:
-          # Download a new CSV file or update it from an external source
-
-          # Here, we'll just push a "dummy" update for demonstration purposes:
-          echo "Update to CSV" > latest.csv
-
-          # Commit the new CSV file
+          echo "Updating the CSV file" > latest.csv  # This is just a placeholder logic
           git add latest.csv
           git commit -m "Update CSV"
           git push origin main
