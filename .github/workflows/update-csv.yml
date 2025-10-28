@@ -21,8 +21,8 @@ jobs:
 
       - name: Set Git Author Identity
         run: |
-          git config --global user.email "robop72@gmail.com"
-          git config --global user.name "robop72"
+          git config --global user.email "robop72@gmail.com"  # Use your GitHub email
+          git config --global user.name "robop72"            # Use your GitHub username
 
       - name: Commit the CSV update
         run: |
