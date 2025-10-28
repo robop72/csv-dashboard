@@ -21,7 +21,12 @@ jobs:
 
       - name: Commit the CSV update
         run: |
+          # Create or modify your CSV file
           echo "Updating the CSV file" > latest.csv  # This is just a placeholder logic
+          
+          # Add changes and commit the updated CSV
           git add latest.csv
           git commit -m "Update CSV"
+          
+          # Push changes back to the repository using GITHUB_TOKEN
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
